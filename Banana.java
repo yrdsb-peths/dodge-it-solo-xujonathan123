@@ -14,7 +14,7 @@ public class Banana extends Actor
      */
     public void act()
     {
-        move(-20);
+        move(-15);
         
         if(getX() <=0){
             resetBanana();
