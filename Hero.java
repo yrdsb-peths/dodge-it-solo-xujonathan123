@@ -22,7 +22,7 @@ public class Hero extends Actor
             setLocation(100,100);
         }
         else{
-            setLocation(300, 100);
+            setLocation(100, 300);
         }
     }
 }
