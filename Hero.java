@@ -15,6 +15,7 @@ public class Hero extends Actor
     boolean atTop = false;
     public void act()
     {
+        //toggle hero position on mouse click
         if(Greenfoot.mouseClicked(null)){
             atTop = !atTop;
         }

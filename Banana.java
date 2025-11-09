@@ -14,11 +14,14 @@ public class Banana extends Actor
      */
     public void act()
     {
+        //move left at 15 speed
         move(-15);
         
+        //reset banana when at the end of the screen
         if(getX() <=0){
             resetBanana();
         }
+        //end game if touch hero
         if(isTouching(Hero.class)){
             SadFace sadFace = new SadFace();
             getWorld().addObject(sadFace, 300, 200);
@@ -27,6 +30,7 @@ public class Banana extends Actor
         
     }
     public void resetBanana(){
+        //randomly move banana to one of two spots
         int num = Greenfoot.getRandomNumber(2);
         if(num ==0){
             setLocation(600, 100);
