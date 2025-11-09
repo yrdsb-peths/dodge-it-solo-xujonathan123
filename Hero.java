@@ -13,11 +13,17 @@ public class Hero extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     boolean atTop = false;
+    boolean lastState = false;
     public void act()
     {
         //toggle hero position on mouse click
-        if(Greenfoot.mouseClicked(null)){
-            atTop = !atTop;
+        if (Greenfoot.isKeyDown("space")) {
+            if (!lastState) { // key was just pressed
+                atTop = !atTop; // flip state
+                lastState = true;
+            }
+        } else {
+            lastState = false; // reset when key released
         }
         if(atTop){
             setLocation(100,100);
@@ -25,5 +31,6 @@ public class Hero extends Actor
         else{
             setLocation(100, 300);
         }
+        
     }
 }
