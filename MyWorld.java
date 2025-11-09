@@ -17,9 +17,6 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        //put toggle on spacebar, add healthbar, increment speed over time
-        //score tracker
-        //reset button on screen
         
         //add classes and objects
         Hero hero = new Hero();
