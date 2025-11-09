@@ -25,6 +25,7 @@ public class Banana extends Actor
         if(isTouching(Hero.class)){
             touches++;
             resetBanana();
+            //add bombs for each life
             if(touches == 1){
                 Strike one = new Strike();
                 getWorld().addObject(one, 400, 50);
@@ -37,6 +38,7 @@ public class Banana extends Actor
                 Strike three = new Strike();
                 getWorld().addObject(three, 500, 50);
             }
+            //after 4th failure, end game
             if(touches ==4){
                 SadFace sadFace = new SadFace();
                 getWorld().addObject(sadFace, 300, 200);
